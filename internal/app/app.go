@@ -1,9 +1,9 @@
 package app
 
 import (
-	"fmt"
-
 	"github.com/urfave/cli/v2"
+
+	"github.com/pkorobeinikov/multipass-compose/internal/command"
 )
 
 func New() *cli.App {
@@ -12,15 +12,13 @@ func New() *cli.App {
 			{
 				Name: "up",
 				Action: func(ctx *cli.Context) error {
-					fmt.Println("up")
-					return nil
+					return command.Up(ctx)
 				},
 			},
 			{
 				Name: "down",
 				Action: func(ctx *cli.Context) error {
-					fmt.Println("down")
-					return nil
+					return command.Down(ctx)
 				},
 			},
 		},

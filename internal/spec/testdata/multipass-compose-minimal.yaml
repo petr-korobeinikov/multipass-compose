@@ -1,0 +1,3 @@
+services:
+  instance-1:
+    image: focal

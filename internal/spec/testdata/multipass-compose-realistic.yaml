@@ -1,0 +1,9 @@
+services:
+  lb: # stands for load balancer (nginx/haproxy...)
+    image: focal
+  instance-1:
+    image: focal
+  instance-2:
+    image: focal
+  instance-3:
+    image: focal
