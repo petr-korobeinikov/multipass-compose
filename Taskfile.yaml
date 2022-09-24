@@ -1,0 +1,26 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task --list-all
+    silent: true
+    desc: Show this help.
+
+  build:
+    cmds:
+      - go build -o ~/Bin/multipass-compose ./cmd/multipass-compose/main.go
+    desc: Build the go binary.
+
+  test:
+    cmds:
+      - go test -v -count=1 ./...
+    desc: Run unit tests.
+
+  test/integration:
+    cmds:
+      - bats .
+    dir: t/bats
+    desc: Run integration tests.
