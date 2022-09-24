@@ -44,6 +44,27 @@ multipass-compose status      # Shows machines status
 multipass-compose ip <name>   # Shows IPv4 address of given machine
 ```
 
+## `multipass-compose.yaml` reference
+
+```yaml
+services: # Defines a list of services
+  lb: # Custom machine name
+    image: focal # Ubuntu release, see `multipass find`
+    cpus: 1 # Number of CPUs to allocate.
+    mem: 1G # Amount of memory to allocate. Positive integers, in bytes, or with K, M, G suffix.
+    disk: 5G # Disk space to allocate. Positive integers, in bytes, or with K, M, G suffix.
+  database:
+    image: focal
+    cpus: 4
+    mem: 4G
+    disk: 80G
+  backend:
+    image: focal
+    cpus: 2
+    mem: 2G
+    disk: 20G
+```
+
 ---
 
 This project is licensed under the terms of the MIT license.
