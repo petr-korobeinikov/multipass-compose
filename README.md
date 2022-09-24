@@ -4,7 +4,7 @@
 
 ## TL;DR
 
-1. Define a spec:
+1. Define your `multipass-compose.yaml`:
 
    ```yaml
    services:
@@ -22,8 +22,14 @@
    multipass-compose up
    ```
 
-3. Do the job :hammer_and_wrench: :carpentry_saw: :hammer: :wrench:
-4. Turn machines off:
+3. Check the status:
+
+   ```shell
+   multipass-compose status
+   ```
+
+4. Do the job :hammer_and_wrench: :carpentry_saw: :hammer: :wrench:
+5. Turn machines off:
 
    ```shell
    multipass-compose down
