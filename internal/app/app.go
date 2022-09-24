@@ -21,6 +21,12 @@ func New() *cli.App {
 					return command.Down(ctx)
 				},
 			},
+			{
+				Name: "status",
+				Action: func(ctx *cli.Context) error {
+					return command.Status(ctx)
+				},
+			},
 		},
 	}
 }
