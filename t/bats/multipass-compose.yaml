@@ -1,0 +1,7 @@
+services:
+  web-server:
+    image: focal
+  database:
+    image: focal
+  backend:
+    image: focal
