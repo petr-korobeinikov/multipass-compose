@@ -27,6 +27,12 @@ func New() *cli.App {
 					return command.Status(ctx)
 				},
 			},
+			{
+				Name: "ip",
+				Action: func(ctx *cli.Context) error {
+					return command.Ip(ctx)
+				},
+			},
 		},
 	}
 }

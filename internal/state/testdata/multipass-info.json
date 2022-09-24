@@ -1,0 +1,32 @@
+{
+  "errors": [
+  ],
+  "info": {
+    "instance-1": {
+      "disks": {
+        "sda1": {
+          "total": "43514589184",
+          "used": "1385013248"
+        }
+      },
+      "image_hash": "e82e1efa55411f76124983ca796ebcc3590cae12f47389c6092c8a84ed28bbb8",
+      "image_release": "20.04 LTS",
+      "ipv4": [
+        "192.168.64.39"
+      ],
+      "load": [
+        0.18,
+        0.07,
+        0.02
+      ],
+      "memory": {
+        "total": 6212362240,
+        "used": 205672448
+      },
+      "mounts": {
+      },
+      "release": "Ubuntu 20.04.5 LTS",
+      "state": "Running"
+    }
+  }
+}
