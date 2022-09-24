@@ -1,0 +1,6 @@
+services:
+  instance-1:
+    image: focal
+    cpus: 4 # Number of CPUs to allocate.
+    mem: 6G # Amount of memory to allocate. Positive integers, in bytes, or with K, M, G suffix.
+    disk: 42G # Disk space to allocate. Positive integers, in bytes, or with K, M, G suffix.

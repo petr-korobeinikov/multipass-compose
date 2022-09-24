@@ -13,6 +13,9 @@ type (
 
 	Service struct {
 		Image string `yaml:"image"`
+		CPUs  string `yaml:"cpus"`
+		Mem   string `yaml:"mem"`
+		Disk  string `yaml:"disk"`
 	}
 )
 

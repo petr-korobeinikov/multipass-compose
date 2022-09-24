@@ -15,7 +15,26 @@ func Up(ctx *cli.Context) error {
 	}
 
 	for name, svc := range s.Services {
-		if err := multipass.Execute(ctx.Context, "launch", svc.Image, "--name", name); err != nil {
+		args := []string{
+			"launch",
+			svc.Image,
+			"--name",
+			name,
+		}
+
+		if svc.CPUs != "" {
+			args = append(args, "--cpus", svc.CPUs)
+		}
+
+		if svc.Mem != "" {
+			args = append(args, "--mem", svc.Mem)
+		}
+
+		if svc.Disk != "" {
+			args = append(args, "--disk", svc.Disk)
+		}
+
+		if err := multipass.Execute(ctx.Context, args...); err != nil {
 			return err
 		}
 	}
