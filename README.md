@@ -35,6 +35,15 @@
    multipass-compose down
    ```
 
+## Command reference
 
+```shell
+multipass-compose up          # Starts machines up
+multipass-compose down        # Turns machines down
+multipass-compose status      # Shows machines status
+multipass-compose ip <name>   # Shows IPv4 address of given machine
+```
+
+---
 
 This project is licensed under the terms of the MIT license.
