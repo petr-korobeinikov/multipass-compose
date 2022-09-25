@@ -24,3 +24,8 @@ tasks:
       - bats --timing .
     dir: t/bats
     desc: Run integration tests.
+
+  docs/run:
+    cmds:
+      - docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
+    desc: Run docs locally in docker

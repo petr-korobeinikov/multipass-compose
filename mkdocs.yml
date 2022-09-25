@@ -1,0 +1,34 @@
+site_name: multipass-compose
+repo_url: https://github.com/pkorobeinikov/multipass-compose
+repo_name: pkorobeinikov/multipass-compose
+edit_uri: ""
+theme:
+  name: material
+  palette:
+    primary: deep orange
+  features:
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+markdown_extensions:
+  - footnotes
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+extra:
+  analytics:
+    provider: google
+    property: G-R3ZPFQKT17
+nav:
+  - О проекте: index.md
+  - Установка: install.md
+  - Быстрый старт: quickstart.md
+  - Команды (CLI): command-line-reference.md
+  - multipass-compose.yaml: multipass-compose-yaml-reference.md
