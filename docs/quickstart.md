@@ -42,9 +42,3 @@ multipass-compose down
 ```
 
 После выполнения этой команды виртуальные машины будут полностью удалены.
-
-## Примеры конфигурации
-
-<!-- @formatter:off -->
-Больше примеров конфигурации можно найти в отдельном репозитории [multipass-compose-showcase](https://github.com/pkorobeinikov/multipass-compose-showcase).
-<!-- @formatter:on -->

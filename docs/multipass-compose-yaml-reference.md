@@ -1,5 +1,7 @@
 # multipass-compose.yaml
 
+## Структура multipass-compose.yaml
+
 Ниже приведён пример полной конфигурации кластера из трёх виртуальных машин.
 
 ```yaml
@@ -34,3 +36,9 @@ services:
 
 Количество машин и их имена могут быть любыми и выбираются исходя из ваших
 задач.
+
+## Примеры конфигурации
+
+<!-- @formatter:off -->
+Больше примеров конфигурации можно найти в отдельном репозитории [multipass-compose-showcase](https://github.com/pkorobeinikov/multipass-compose-showcase).
+<!-- @formatter:on -->
