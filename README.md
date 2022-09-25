@@ -59,6 +59,7 @@ services: # Defines a list of services
     cpus: 1 # Number of CPUs to allocate.
     mem: 1G # Amount of memory to allocate. Positive integers, in bytes, or with K, M, G suffix.
     disk: 5G # Disk space to allocate. Positive integers, in bytes, or with K, M, G suffix.
+    cloud-init: path/to/cloud/config.yaml # Path or URL to a user-data cloud-init configuration.
   database:
     image: focal
     cpus: 4

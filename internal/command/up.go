@@ -34,6 +34,10 @@ func Up(ctx *cli.Context) error {
 			args = append(args, "--disk", svc.Disk)
 		}
 
+		if svc.CloudInit != "" {
+			args = append(args, "--cloud-init", svc.CloudInit)
+		}
+
 		if err := multipass.Execute(ctx.Context, args...); err != nil {
 			return err
 		}

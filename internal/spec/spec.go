@@ -12,10 +12,11 @@ type (
 	}
 
 	Service struct {
-		Image string `yaml:"image"`
-		CPUs  string `yaml:"cpus"`
-		Mem   string `yaml:"mem"`
-		Disk  string `yaml:"disk"`
+		Image     string `yaml:"image"`
+		CPUs      string `yaml:"cpus"`
+		Mem       string `yaml:"mem"`
+		Disk      string `yaml:"disk"`
+		CloudInit string `yaml:"cloud-init"`
 	}
 )
 
