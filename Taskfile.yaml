@@ -21,6 +21,6 @@ tasks:
 
   test/integration:
     cmds:
-      - bats .
+      - bats --timing .
     dir: t/bats
     desc: Run integration tests.
