@@ -73,7 +73,3 @@ services: # Defines a list of services
 
 A complete list of examples you can find out
 in [this repo](https://github.com/pkorobeinikov/multipass-compose-showcase).
-
----
-
-This project is licensed under the terms of the MIT license.
