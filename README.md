@@ -73,3 +73,11 @@ services: # Defines a list of services
 
 A complete list of examples you can find out
 in [this repo](https://github.com/pkorobeinikov/multipass-compose-showcase).
+
+## Development
+
+`bats` helpers installed as git submodules. To fetch them out use:
+
+```shell
+git submodule update --init --recursive
+```
