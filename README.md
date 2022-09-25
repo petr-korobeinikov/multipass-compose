@@ -2,6 +2,12 @@
 
 > Compose multipass™ virtual machines like a ... charm!
 
+## Install
+
+```shell
+go install github.com/pkorobeinikov/multipass-compose/cmd/multipass-compose@latest
+```
+
 ## TL;DR
 
 1. Define your `multipass-compose.yaml`:
