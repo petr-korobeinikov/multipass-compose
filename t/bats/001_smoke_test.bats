@@ -3,7 +3,7 @@ setup() {
   load 'test_helper/bats-assert/load'
 }
 
-@test "ensure multipass-compose binary exacutable" {
+@test "ensure multipass-compose binary executable" {
   run multipass-compose
 
   assert_output --partial 'NAME:'
