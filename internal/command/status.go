@@ -1,6 +1,8 @@
 package command
 
 import (
+	"log"
+
 	"github.com/urfave/cli/v2"
 
 	"github.com/pkorobeinikov/multipass-compose/internal/cfg"
@@ -16,7 +18,7 @@ func Status(ctx *cli.Context) error {
 
 	for name := range s.Services {
 		if err := multipass.Execute(ctx.Context, "info", name); err != nil {
-			return err
+			log.Println(err)
 		}
 	}
 
