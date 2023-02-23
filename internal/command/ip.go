@@ -1,7 +1,6 @@
 package command
 
 import (
-	"errors"
 	"fmt"
 
 	"github.com/urfave/cli/v2"
@@ -12,18 +11,14 @@ import (
 	"github.com/pkorobeinikov/multipass-compose/internal/state"
 )
 
-func Ip(ctx *cli.Context) error {
-	if ctx.NArg() == 0 {
-		return ErrMachineNameNotSpecified
-	}
-
+func Ip(ctx *cli.Context, machineName string) error {
 	s, err := spec.Load(cfg.DefaultMultipassComposeSpecFile)
 	if err != nil {
 		return err
 	}
 
 	for name := range s.Services {
-		if name == ctx.Args().First() {
+		if name == machineName {
 			b, err := multipass.ExecuteOutput(ctx.Context, "info", name, "--format", "json")
 			if err != nil {
 				return err
@@ -40,7 +35,3 @@ func Ip(ctx *cli.Context) error {
 
 	return nil
 }
-
-var (
-	ErrMachineNameNotSpecified = errors.New("machine name not specified")
-)

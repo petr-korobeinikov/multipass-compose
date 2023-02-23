@@ -1,6 +1,8 @@
 package app
 
 import (
+	"errors"
+
 	"github.com/urfave/cli/v2"
 
 	"github.com/pkorobeinikov/multipass-compose/internal/command"
@@ -30,7 +32,11 @@ func New() *cli.App {
 			{
 				Name: "ip",
 				Action: func(ctx *cli.Context) error {
-					return command.Ip(ctx)
+					if ctx.NArg() == 0 {
+						return ErrMachineNameNotSpecified
+					}
+
+					return command.Ip(ctx, ctx.Args().First())
 				},
 			},
 			{
@@ -42,3 +48,7 @@ func New() *cli.App {
 		},
 	}
 }
+
+var (
+	ErrMachineNameNotSpecified = errors.New("machine name not specified")
+)
