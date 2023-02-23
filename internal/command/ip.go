@@ -1,9 +1,8 @@
 package command
 
 import (
+	"context"
 	"fmt"
-
-	"github.com/urfave/cli/v2"
 
 	"github.com/pkorobeinikov/multipass-compose/internal/cfg"
 	"github.com/pkorobeinikov/multipass-compose/internal/multipass"
@@ -11,7 +10,7 @@ import (
 	"github.com/pkorobeinikov/multipass-compose/internal/state"
 )
 
-func Ip(ctx *cli.Context, machineName string) error {
+func Ip(ctx context.Context, machineName string) error {
 	s, err := spec.Load(cfg.DefaultMultipassComposeSpecFile)
 	if err != nil {
 		return err
@@ -19,7 +18,7 @@ func Ip(ctx *cli.Context, machineName string) error {
 
 	for name := range s.Services {
 		if name == machineName {
-			b, err := multipass.ExecuteOutput(ctx.Context, "info", name, "--format", "json")
+			b, err := multipass.ExecuteOutput(ctx, "info", name, "--format", "json")
 			if err != nil {
 				return err
 			}

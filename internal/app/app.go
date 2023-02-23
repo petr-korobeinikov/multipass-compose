@@ -14,19 +14,19 @@ func New() *cli.App {
 			{
 				Name: "up",
 				Action: func(ctx *cli.Context) error {
-					return command.Up(ctx)
+					return command.Up(ctx.Context)
 				},
 			},
 			{
 				Name: "down",
 				Action: func(ctx *cli.Context) error {
-					return command.Down(ctx)
+					return command.Down(ctx.Context)
 				},
 			},
 			{
 				Name: "status",
 				Action: func(ctx *cli.Context) error {
-					return command.Status(ctx)
+					return command.Status(ctx.Context)
 				},
 			},
 			{
@@ -36,13 +36,13 @@ func New() *cli.App {
 						return ErrMachineNameNotSpecified
 					}
 
-					return command.Ip(ctx, ctx.Args().First())
+					return command.Ip(ctx.Context, ctx.Args().First())
 				},
 			},
 			{
 				Name: "init",
 				Action: func(ctx *cli.Context) error {
-					return command.Init(ctx)
+					return command.Init(ctx.Context)
 				},
 			},
 		},

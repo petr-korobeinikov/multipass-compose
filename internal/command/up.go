@@ -1,14 +1,14 @@
 package command
 
 import (
-	"github.com/urfave/cli/v2"
+	"context"
 
 	"github.com/pkorobeinikov/multipass-compose/internal/cfg"
 	"github.com/pkorobeinikov/multipass-compose/internal/multipass"
 	"github.com/pkorobeinikov/multipass-compose/internal/spec"
 )
 
-func Up(ctx *cli.Context) error {
+func Up(ctx context.Context) error {
 	s, err := spec.Load(cfg.DefaultMultipassComposeSpecFile)
 	if err != nil {
 		return err
@@ -38,7 +38,7 @@ func Up(ctx *cli.Context) error {
 			args = append(args, "--cloud-init", svc.CloudInit)
 		}
 
-		if err := multipass.Execute(ctx.Context, args...); err != nil {
+		if err := multipass.Execute(ctx, args...); err != nil {
 			return err
 		}
 	}

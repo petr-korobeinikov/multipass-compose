@@ -1,16 +1,15 @@
 package command
 
 import (
+	"context"
 	"errors"
 	"os"
-
-	"github.com/urfave/cli/v2"
 
 	"github.com/pkorobeinikov/multipass-compose/internal/cfg"
 	"github.com/pkorobeinikov/multipass-compose/internal/spec"
 )
 
-func Init(ctx *cli.Context) error {
+func Init(_ context.Context) error {
 	if _, err := os.Stat(cfg.DefaultMultipassComposeSpecFile); err == nil {
 		return ErrSpecFileExists
 	}
