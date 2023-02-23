@@ -33,6 +33,12 @@ func New() *cli.App {
 					return command.Ip(ctx)
 				},
 			},
+			{
+				Name: "init",
+				Action: func(ctx *cli.Context) error {
+					return command.Init(ctx)
+				},
+			},
 		},
 	}
 }

@@ -2,6 +2,14 @@
 
 В разделе описаны команды утилиты `multipass-compose`.
 
+## multipass-compose init
+
+Инициализация конфигурационного файла `multipass-compose.yaml`:
+
+```shell
+multipass-compose init
+```
+
 ## multipass-compose up
 
 Запуск виртуальных машин, описанных в файле `multipass-compose.yaml`:

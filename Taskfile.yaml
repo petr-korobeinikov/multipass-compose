@@ -21,7 +21,7 @@ tasks:
 
   test/integration:
     cmds:
-      - bats --timing .
+      - bats --timing --print-output-on-failure {{ default "." .CLI_ARGS}}
     dir: t/bats
     desc: Run integration tests.
 

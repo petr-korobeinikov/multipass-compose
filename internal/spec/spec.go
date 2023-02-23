@@ -1,9 +1,12 @@
 package spec
 
 import (
+	"bytes"
 	"os"
 
 	"gopkg.in/yaml.v3"
+
+	"github.com/pkorobeinikov/multipass-compose/internal/cfg"
 )
 
 type (
@@ -13,10 +16,10 @@ type (
 
 	Service struct {
 		Image     string `yaml:"image"`
-		CPUs      string `yaml:"cpus"`
-		Mem       string `yaml:"mem"`
-		Disk      string `yaml:"disk"`
-		CloudInit string `yaml:"cloud-init"`
+		CPUs      string `yaml:"cpus,omitempty"`
+		Mem       string `yaml:"mem,omitempty"`
+		Disk      string `yaml:"disk,omitempty"`
+		CloudInit string `yaml:"cloud-init,omitempty"`
 	}
 )
 
@@ -34,4 +37,19 @@ func Load(path string) (*Spec, error) {
 	}
 
 	return &s, nil
+}
+
+func Encode(s *Spec) ([]byte, error) {
+	var b bytes.Buffer
+
+	enc := yaml.NewEncoder(&b)
+	defer enc.Close()
+
+	enc.SetIndent(cfg.DefaultYamlIndent)
+
+	if err := enc.Encode(s); err != nil {
+		return nil, err
+	}
+
+	return b.Bytes(), nil
 }
