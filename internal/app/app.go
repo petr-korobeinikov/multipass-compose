@@ -45,6 +45,20 @@ func New() *cli.App {
 					return command.Init(ctx.Context)
 				},
 			},
+			{
+				Name: "restart",
+				Action: func(ctx *cli.Context) error {
+					if err := command.Down(ctx.Context); err != nil {
+						return err
+					}
+
+					if err := command.Up(ctx.Context); err != nil {
+						return err
+					}
+
+					return nil
+				},
+			},
 		},
 	}
 }

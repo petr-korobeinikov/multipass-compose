@@ -47,4 +47,13 @@ multipass-compose ip <machine>
 multipass-compose down
 ```
 
+## multipass-compose restart
+
+Перезапуск всех виртуальных машин со сбросом состояния. Применяется, если вам
+нужно проверить корректность развёртывания на "чистом" окружении.
+
+```shell
+multipass-compose restart
+```
+
 [^dynamic-inventory]: [Working with dynamic inventory](https://docs.ansible.com/ansible/latest/user_guide/intro_dynamic_inventory.html)
