@@ -23,10 +23,10 @@ type (
 	}
 )
 
-func Load(path string) (*Spec, error) {
+func Load(specFileName string) (*Spec, error) {
 	var s Spec
 
-	f, err := os.ReadFile(path)
+	f, err := os.ReadFile(specFileName)
 	if err != nil {
 		return nil, err
 	}
