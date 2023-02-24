@@ -2,11 +2,14 @@ package spec
 
 import (
 	"bytes"
+	"errors"
 	"os"
+	"path/filepath"
 
 	"gopkg.in/yaml.v3"
 
 	"github.com/pkorobeinikov/multipass-compose/internal/cfg"
+	"github.com/pkorobeinikov/multipass-compose/internal/fsext"
 )
 
 type (
@@ -23,10 +26,51 @@ type (
 	}
 )
 
-func Load(specFileName string) (*Spec, error) {
-	var s Spec
+var (
+	ErrSpecFileNotFound = errors.New("spec file not found")
+)
 
-	f, err := os.ReadFile(specFileName)
+func Load(specFileName string) (*Spec, error) {
+	var (
+		s            Spec
+		specFilePath string
+	)
+
+	if fsext.FileExists(specFileName) {
+		specFilePath = specFileName
+	} else {
+		var parentDirsTillRoot []string
+
+		dir := ".."
+		for {
+			parentDirsTillRoot = append(parentDirsTillRoot, dir)
+
+			dir = filepath.Join("..", dir)
+
+			abs, err := filepath.Abs(dir)
+			if err != nil {
+				return nil, err
+			}
+			if abs == string(filepath.Separator) {
+				break
+			}
+		}
+
+		found := false
+		for _, d := range parentDirsTillRoot {
+			specFilePath = filepath.Join(d, specFileName)
+			if fsext.FileExists(specFilePath) {
+				found = true
+
+				break
+			}
+		}
+		if !found {
+			return nil, ErrSpecFileNotFound
+		}
+	}
+
+	f, err := os.ReadFile(specFilePath)
 	if err != nil {
 		return nil, err
 	}
