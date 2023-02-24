@@ -6,6 +6,7 @@ import (
 	"os"
 
 	"github.com/pkorobeinikov/multipass-compose/internal/cfg"
+	"github.com/pkorobeinikov/multipass-compose/internal/fsext"
 	"github.com/pkorobeinikov/multipass-compose/internal/spec"
 )
 
@@ -27,7 +28,7 @@ func Init(_ context.Context) error {
 		return err
 	}
 
-	if err := os.WriteFile(cfg.DefaultMultipassComposeSpecFile, b, os.ModePerm); err != nil {
+	if err := os.WriteFile(cfg.DefaultMultipassComposeSpecFile, b, fsext.ModeFile); err != nil {
 		return err
 	}
 
