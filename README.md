@@ -1,6 +1,14 @@
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
 # multipass-compose
 
 > Compose multipass™ virtual machines like a ... charm!
+
+## Deprecation warning
+
+Multipass is a buggy and inconvenient project to manage virtual machines with Ubuntu.
+So this project is now deprecated.
+Think about using `lima`/`colima` instead which is more powerful and truly supported by community.
 
 ## Install
 
