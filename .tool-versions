@@ -1,4 +1,4 @@
-golang 1.19.1
+golang 1.19.13
 adr-tools 3.0.0
 task 3.15.2
 yq 4.30.8

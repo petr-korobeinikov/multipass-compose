@@ -4,9 +4,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/pkorobeinikov/multipass-compose/internal/cfg"
-	"github.com/pkorobeinikov/multipass-compose/internal/multipass"
-	"github.com/pkorobeinikov/multipass-compose/internal/spec"
+	"github.com/petr-korobeinikov/multipass-compose/internal/cfg"
+	"github.com/petr-korobeinikov/multipass-compose/internal/multipass"
+	"github.com/petr-korobeinikov/multipass-compose/internal/spec"
 )
 
 func Status(ctx context.Context) error {

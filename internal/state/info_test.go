@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/pkorobeinikov/multipass-compose/internal/state"
+	"github.com/petr-korobeinikov/multipass-compose/internal/state"
 )
 
 func TestParseInfo(t *testing.T) {

@@ -40,5 +40,5 @@ services:
 ## Примеры конфигурации
 
 <!-- @formatter:off -->
-Больше примеров конфигурации можно найти в отдельном репозитории [multipass-compose-showcase](https://github.com/pkorobeinikov/multipass-compose-showcase).
+Больше примеров конфигурации можно найти в отдельном репозитории [multipass-compose-showcase](https://github.com/petr-korobeinikov/multipass-compose-showcase).
 <!-- @formatter:on -->

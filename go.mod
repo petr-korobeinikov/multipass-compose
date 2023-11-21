@@ -1,4 +1,4 @@
-module github.com/pkorobeinikov/multipass-compose
+module github.com/petr-korobeinikov/multipass-compose
 
 go 1.19
 

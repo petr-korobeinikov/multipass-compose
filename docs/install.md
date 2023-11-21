@@ -9,5 +9,5 @@ brew install --cask multipass
 Затем установите `multipass-compose`:
 
 ```shell
-go install github.com/pkorobeinikov/multipass-compose/cmd/multipass-compose@latest
+go install github.com/petr-korobeinikov/multipass-compose/cmd/multipass-compose@latest
 ```

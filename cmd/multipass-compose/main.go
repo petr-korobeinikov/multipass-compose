@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/pkorobeinikov/multipass-compose/internal/app"
+	"github.com/petr-korobeinikov/multipass-compose/internal/app"
 )
 
 func main() {

@@ -5,9 +5,9 @@ import (
 	"errors"
 	"os"
 
-	"github.com/pkorobeinikov/multipass-compose/internal/cfg"
-	"github.com/pkorobeinikov/multipass-compose/internal/fsext"
-	"github.com/pkorobeinikov/multipass-compose/internal/spec"
+	"github.com/petr-korobeinikov/multipass-compose/internal/cfg"
+	"github.com/petr-korobeinikov/multipass-compose/internal/fsext"
+	"github.com/petr-korobeinikov/multipass-compose/internal/spec"
 )
 
 func Init(_ context.Context) error {

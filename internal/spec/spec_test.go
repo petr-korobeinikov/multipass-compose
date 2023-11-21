@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/pkorobeinikov/multipass-compose/internal/spec"
+	"github.com/petr-korobeinikov/multipass-compose/internal/spec"
 )
 
 func TestLoad(t *testing.T) {

@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/pkorobeinikov/multipass-compose/internal/cfg"
-	"github.com/pkorobeinikov/multipass-compose/internal/multipass"
-	"github.com/pkorobeinikov/multipass-compose/internal/spec"
-	"github.com/pkorobeinikov/multipass-compose/internal/state"
+	"github.com/petr-korobeinikov/multipass-compose/internal/cfg"
+	"github.com/petr-korobeinikov/multipass-compose/internal/multipass"
+	"github.com/petr-korobeinikov/multipass-compose/internal/spec"
+	"github.com/petr-korobeinikov/multipass-compose/internal/state"
 )
 
 func Ip(ctx context.Context, machineName string) error {

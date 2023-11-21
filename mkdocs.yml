@@ -1,6 +1,6 @@
 site_name: multipass-compose
-repo_url: https://github.com/pkorobeinikov/multipass-compose
-repo_name: pkorobeinikov/multipass-compose
+repo_url: https://github.com/petr-korobeinikov/multipass-compose
+repo_name: petr-korobeinikov/multipass-compose
 edit_uri: ""
 theme:
   name: material

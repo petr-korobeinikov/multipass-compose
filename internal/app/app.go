@@ -5,7 +5,7 @@ import (
 
 	"github.com/urfave/cli/v2"
 
-	"github.com/pkorobeinikov/multipass-compose/internal/command"
+	"github.com/petr-korobeinikov/multipass-compose/internal/command"
 )
 
 func New() *cli.App {

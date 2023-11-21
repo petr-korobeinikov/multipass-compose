@@ -8,8 +8,8 @@ import (
 
 	"gopkg.in/yaml.v3"
 
-	"github.com/pkorobeinikov/multipass-compose/internal/cfg"
-	"github.com/pkorobeinikov/multipass-compose/internal/fsext"
+	"github.com/petr-korobeinikov/multipass-compose/internal/cfg"
+	"github.com/petr-korobeinikov/multipass-compose/internal/fsext"
 )
 
 type (

@@ -3,9 +3,9 @@ package command
 import (
 	"context"
 
-	"github.com/pkorobeinikov/multipass-compose/internal/cfg"
-	"github.com/pkorobeinikov/multipass-compose/internal/multipass"
-	"github.com/pkorobeinikov/multipass-compose/internal/spec"
+	"github.com/petr-korobeinikov/multipass-compose/internal/cfg"
+	"github.com/petr-korobeinikov/multipass-compose/internal/multipass"
+	"github.com/petr-korobeinikov/multipass-compose/internal/spec"
 )
 
 func Up(ctx context.Context) error {
